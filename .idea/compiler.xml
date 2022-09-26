@@ -8,14 +8,17 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-test" />
         <module name="cloud-provider" />
-        <module name="client2" />
         <module name="eureka-server" />
         <module name="cloud-client" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="client2" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud" options="-parameters" />
       <module name="cloud-client" options="-parameters" />
       <module name="cloud-provider" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
